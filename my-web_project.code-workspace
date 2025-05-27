@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "path": "C:/Users/Tolib/OneDrive/Рабочий стол/my-web_project",
+      "name": "my-web_project",
+    },
+  ],
+  "settings": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "liveServer.settings.donotVerifyTags": true,
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features",
+    },
+    "cSpell.words": ["mkaufman"],
+    "[jsonc]": {
+      "editor.defaultFormatter": "vscode.json-language-features",
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "hb432.prettier-eslint-typescript",
+    },
+  },
+}

@@ -1,11 +1,18 @@
 {
-	"folders": [
-		{
-			"path": "../../Documents/PythonProject1"
-		},
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "C:/Users/Tolib/OneDrive/Documents/PythonProject1",
+      "name": "PythonProject1",
+    },
+    {
+      "path": ".",
+    },
+  ],
+  "settings": {
+    "python.pythonPath": "venv/bin/python",
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/.venv": true,
+    },
+  },
 }
