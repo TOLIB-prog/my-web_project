@@ -14,5 +14,6 @@
       "**/__pycache__": true,
       "**/.venv": true,
     },
+    "liveServer.settings.multiRootWorkspaceName": "PythonProject1",
   },
 }
