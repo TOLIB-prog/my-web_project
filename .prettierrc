@@ -1,14 +1,13 @@
 {
-  "semi": false,
-  "tabWidth": 2,
+  "printWidth": 100,
   "singleQuote": true,
+  "cssMaxEmptyLines": 0,
+  "bracketSameLine": false,
   "overrides": [
     {
-      "files": ["*.css", "*.scss"],
+      "files": "*.css",
       "options": {
-        "parser": "css",
-        "printWidth": 120,
-        "cssEnable": true
+        "parser": "css"
       }
     }
   ]

@@ -1,1 +1,14 @@
 # Custom Dictionary Words
+boolbase
+callsites
+domelementtype
+domhandler
+esutils
+findlast
+globalthis
+gopd
+hookified
+iojs
+reusify
+tosorted
+unscopables

@@ -11,9 +11,7 @@
     "[html]": {
       "editor.defaultFormatter": "vscode.html-language-features",
     },
-    "cSpell.words": [
-      "mkaufman"
-    ],
+    "cSpell.words": ["brackert", "mkaufman"],
     "[jsonc]": {
       "editor.defaultFormatter": "vscode.json-language-features",
     },
@@ -23,6 +21,6 @@
   },
   "launch": {
     "version": "0.2.0",
-    "configurations": []
+    "configurations": [],
   },
 }
