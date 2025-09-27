@@ -1,0 +1,9 @@
+{
+  "path": "C:/Users/Tolib/OneDrive/Рабочий стол/my-web-project/app/src/tsconfig.json",
+  "compilerOptions": {
+    "types": ["node", "lodash", "module"], // Укажите необходимые @types-пакеты
+    "typeRoots": ["./node_modules/@types", "./src/types"], // Обязательно для автоматического разрешения типов
+    "include": ["src/**/*.ts", "src/**/*.tsx"], // Где искать ваши файлы
+    "exclude": ["node_modules"]
+  }
+}

@@ -1,0 +1,13 @@
+@use "../util/" as u;
+.nav {
+  width: min(100% - 40px, u.rem(1100));
+  margin-inline: auto;
+
+  &.nav-list {
+    padding-block: 40px;
+
+    @include u.breakpoint(medium) {
+      padding-block: 60px;
+    }
+  }
+}

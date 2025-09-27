@@ -1,0 +1,32 @@
+@use "functions" as f;
+@use "sass:math";
+
+@mixin fs-fluid($min-vw, $max-vw, $min-value, $max-value) {
+  $factor: math.div(1, ($max-vw - $min-vw)) * ($max-value - $min-value);
+  $calc-value: unquote("#{$min-value - ($min-vw *$factor)} + #{100vw}");
+
+  font-size: $min-value;
+  font-size: clamp(#{if($min-value > $max-value, $max-value, $min-value)});
+}
+
+$breakpoints: (
+  "medium": f.em(700),
+  "large": f.em(1200)
+);
+
+@mixin breakpoint($size) {
+  @media (width >= map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+// функция map-get работает с картами scss, карты scss - это объекты содержащие пары ключ-значений,
+// а map-get -это функция, с помощью которой можно вернуть значение из карты по нужному ключу.
+// в файле mixins есть карта Sass, которая называется breakpoints,и в ней две пары ключа и значений.
+// Одна из них называется medium, а значение -700px, преобразованных в ems с помощью функции em.
+// Второй ключ под именем large, а значение 1200px преобразованных в em с помощью функции.
+
+@mixin breakpoint-down($size) {
+  @media (width < map-get($breakpoints, $size)) {
+    @content;
+  }
+}
