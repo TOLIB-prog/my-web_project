@@ -21,4 +21,3 @@
 - SCSS → CSS (через Live Sass Compiler)
 - BEM-методология
 - Emmet для быстрой вёрстки
-  EOF
