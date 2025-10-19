@@ -1,14 +1,16 @@
-var discount = 20;
-var price = 10;
-var total = price - price * (discount / 100);
-console.log(total);
+document.querySelectorAll('.accordion__trigger').forEach((trigger) => {
+  trigger.addEventListener('click', function () {
+    // Закрываем все открытые элементы
+    document.querySelectorAll('.accordion__content').forEach((content) => {
+      content.classList.remove('active');
+    });
+    document.querySelectorAll('.accordion__trigger').forEach((trig) => {
+      trig.classList.remove('active');
+    });
 
-// let temp = 10;
-// console.table([(9 / 5) * temp + 32]);
-
-// let userName = "Alex";
-// console.log(userName + ", " + "you've won");
-c;
-let age = 45;
-let userName = "Max";
-console.log(userName + ", " + str(age));
+    // Открываем текущий элемент
+    const content = this.nextElementSibling;
+    content.classList.toggle('active');
+    this.classList.toggle('active');
+  });
+});

@@ -9,6 +9,7 @@
       "editor.defaultFormatter": "esbenp.prettier-vscode",
       "editor.formatOnSave": true
     },
+
     "[css]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode",
       "editor.formatOnSave": true
@@ -21,9 +22,9 @@
       "editor.defaultFormatter": "esbenp.prettier-vscode",
       "editor.formatOnSave": true
     },
-    "prettier.singleQuote": true,
+    "prettier.singleQuote": false,
     "prettier.semi": true,
-    "prettier.tabWidth": 2,
+    "prettier.tabWidth": 4,
     "prettier.printWidth": 80,
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.CustomBrowser": "chrome",
@@ -53,7 +54,20 @@
     "emmet.preferences": {
       "bem.elementSeparator": "__",
       "bem.modifierSeparator": "--"
-    }
+    },
+    "editor.mouseWheelZoom": true,
+    "RainbowBrackets.forceIterationColorCycle": true,
+    "RainbowBrackets.forceUniqueOpeningColor": true,
+    "RainbowBrackets.consecutivePairColors": [
+      "()",
+      "[]",
+      "{}",
+      ["teal", "yellow", "tomato", "lime"],
+      "Revioletd"
+    ],
+
+    "editor.RainbowBrackets.enabled": true,
+    "editor.guides.bracketPairs": "active"
   },
   "extensions": {
     "recommendations": [
