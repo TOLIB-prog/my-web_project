@@ -1,0 +1,22 @@
+{
+	"name": "your-project-name",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"format:css": "prettier --write \"**/*.{css,scss,less}\"",
+		"format:js": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
+		"format:html": "prettier --write \"**/*.html\"",
+		"format:json": "prettier --write \"**/*.json\""
+	},
+	"devDependencies": {
+		"prettier": "^3.7.4",
+		"stylelint": "^16.26.1",
+		"stylelint-config-standard": "^39.0.1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}

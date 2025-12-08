@@ -1,50 +1,52 @@
 /* ===== CSS ПЕРЕМЕННЫЕ И СБРОС СТИЛЕЙ ===== */
 
 /* Цветовые и типографские переменные */
-/* :root {
-  /* Цветовая палитра */
-/* --primary-color: #eef3ff;
---secondary-color: #64748b;
---accent-color: #f59e0b;
---text-color: #1e293b;
---bg-color: #ffffff;
---border-color: #e2e8f0;
---bg-color-nav: #000000b0;
---bg-color-form: rgb(4, 4, 75); */
+:root {
+	/* Цветовая палитра */
+	--primary-color: #eef3ff;
+	--secondary-color: #64748b;
+	--accent-color: #f59e0b;
+	--text-color: #1e293b;
+	--bg-color: #ffffff;
+	--border-color: #e2e8f0;
+	--bg-color-nav: #000000b0;
+	--bg-color-form: rgb(4, 4, 75);
 
-/* Типографика */
---font-family: 'Inter', -apple-system, sans-serif;
---font-size-sm: 0.875rem;
---font-size-base: 1rem;
---font-size-lg: 1.125rem;
---font-size-xl: 1.25rem;
+	/* Типографика */
+	--font-family: "Inter", -apple-system, sans-serif;
+	--font-size-sm: 0.875rem;
+	--font-size-base: 1rem;
+	--font-size-lg: 1.125rem;
+	--font-size-xl: 1.25rem;
 
-/* Отступы */
---space-xs: 0.25rem;
---space-sm: 0.5rem;
---space-md: 1rem;
---space-lg: 1.5rem;
---space-xl: 1.8rem;
-/* } */
+	/* Отступы */
+	--space-xs: 0.25rem;
+	--space-sm: 0.5rem;
+	--space-md: 1rem;
+	--space-lg: 1.5rem;
+	--space-xl: 1.8rem;
+}
 
 /* Сброс стандартных стилей браузера */
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
 /* Основные стили body */
-/* body {
-  font-family: var(--font-family);
-  font-size: var(--font-size-base);
-  line-height: 1.6;
-  color: var(--text-color);
-  background-color: var(--bg-color);
-} */
+body {
+	font-family: var(--font-family);
+	font-size: var(--font-size-base);
+	line-height: 1.6;
+	color: var(--text-color);
+	/*  */
+	background-color: var(--bg-color);
+}
+
 .grid-container {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-template-rows: repeat(3, 200px);
-  gap: 1em;
+	display: grid;
+	grid-template-columns: 200px 200px 200px;
+	grid-template-rows: repeat(3, 200px);
+	gap: 1em;
 }

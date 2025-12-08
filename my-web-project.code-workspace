@@ -1,81 +1,92 @@
 {
-  "folders": [
-    {
-      "path": "."
-    }
-  ],
-  "settings": {
-    "[html]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.formatOnSave": true
-    },
+	"folders": [
+		{
+			"path": ".",
+		},
+	],
+	"settings": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true,
+		"[html]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+		},
 
-    "[css]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.formatOnSave": true
-    },
-    "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.formatOnSave": true
-    },
-    "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.formatOnSave": true
-    },
-    "prettier.singleQuote": false,
-    "prettier.semi": true,
-    "prettier.tabWidth": 4,
-    "prettier.printWidth": 80,
-    "liveServer.settings.donotShowInfoMsg": true,
-    "liveServer.settings.CustomBrowser": "chrome",
-    "prettier.htmlWhitespaceSensitivity": "ignore",
-    "liveSassCompile.settings.formats": [
-      {
-        "format": "expanded",
-        "extensionName": ".css",
-        "savePath": "/css"
-      }
-    ],
-    "liveSassCompile.settings.generateMap": false,
-    "liveSassCompile.settings.watchOnLaunch": true,
-    "scss.showErrors": true,
-    "emmet.triggerExpansionOnTab": true,
-    "emmet.includeLanguages": {
-      "javascript": "javascriptreact",
-      "html": "html",
-      "scss": "scss",
-      "css": "css"
-    },
-    "emmet.syntaxProfiles": {
-      "html": {
-        "filters": "bem"
-      }
-    },
-    "emmet.preferences": {
-      "bem.elementSeparator": "__",
-      "bem.modifierSeparator": "--"
-    },
-    "editor.mouseWheelZoom": true,
-    "RainbowBrackets.forceIterationColorCycle": true,
-    "RainbowBrackets.forceUniqueOpeningColor": true,
-    "RainbowBrackets.consecutivePairColors": [
-      "()",
-      "[]",
-      "{}",
-      ["teal", "yellow", "tomato", "lime"],
-      "Revioletd"
-    ],
+		"[css]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+		},
+		"[scss]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+		},
+		"[less]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+		},
+		"prettier.requireConfig": true,
+		"prettier.useEditorConfig": false,
+		"files.associations": {
+			"*.css": "css",
+		},
 
-    "editor.RainbowBrackets.enabled": true,
-    "editor.guides.bracketPairs": "active"
-  },
-  "extensions": {
-    "recommendations": [
-      "esbenp.prettier-vscode",
-      "ritwickdey.live-server",
-      "formulaheldry.auto-rename-tag",
-      "ecmel.vscode-html-css",
-      "glenn2223.live-sass"
-    ]
-  }
+		"[javascript]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+		},
+		"[json]": {
+			"editor.defaultFormatter": "esbenp.prettier-vscode",
+		},
+
+		"liveServer.settings.donotShowInfoMsg": true,
+		"liveServer.settings.CustomBrowser": "chrome",
+
+		"liveSassCompile.settings.formats": [
+			{
+				"format": "expanded",
+				"extensionName": ".css",
+				"savePath": "/css",
+			},
+		],
+		"liveSassCompile.settings.generateMap": false,
+		"liveSassCompile.settings.watchOnLaunch": true,
+		"scss.showErrors": true,
+		"emmet.triggerExpansionOnTab": true,
+		"emmet.includeLanguages": {
+			"javascript": "javascriptreact",
+			"html": "html",
+			"scss": "scss",
+			"css": "css",
+		},
+		"emmet.syntaxProfiles": {
+			"html": {
+				"filters": "bem",
+			},
+		},
+		"emmet.preferences": {
+			"bem.elementSeparator": "__",
+			"bem.modifierSeparator": "--",
+		},
+		"editor.mouseWheelZoom": true,
+		"RainbowBrackets.forceIterationColorCycle": true,
+		"RainbowBrackets.forceUniqueOpeningColor": true,
+		"RainbowBrackets.consecutivePairColors": [
+			"()",
+			"[]",
+			"{}",
+			["teal", "yellow", "tomato", "lime"],
+			"Revioletd",
+		],
+
+		"editor.RainbowBrackets.enabled": true,
+		"editor.guides.bracketPairs": "active",
+		"css.format.enable": false,
+		"css.format.newlineBetweenRules": false,
+		"css.format.newlineBetweenSelectors": false,
+		"css.format.preserveNewLines": false,
+	},
+	"extensions": {
+		"recommendations": [
+			"esbenp.prettier-vscode",
+			"ritwickdey.live-server",
+			"formulaheldry.auto-rename-tag",
+			"ecmel.vscode-html-css",
+			"glenn2223.live-sass",
+		],
+	},
 }

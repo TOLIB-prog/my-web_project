@@ -1,0 +1,28 @@
+{
+	"editor.formatOnSave": true,
+	"editor.fontSize": 18,
+	"editor.mouseWheelZoom": true,
+	"css.format.braceStyle": "collapse",
+	"css.format.newlineBetweenRules": true,
+	"css.format.newlineBetweenSelectors": true,
+	"css.format.preserveNewLines": true,
+	"css.format.spaceAroundSelectorSeparator": false,
+	"css.format.maxPreserveNewLines": 120,
+	"css.hover.documentation": false,
+	"css.hover.references": false,
+	"css.completion.triggerPropertyValueCompletion": false,
+	"css.completion.completePropertyWithSemicolon": false,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.tabSize": 3,
+	"scss.format.maxPreserveNewLines": 120,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+	"[css]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.wrapOnEscapedLineFeeds": true,
+	"notebook.output.wordWrap": true,
+	"html.format.wrapAttributes": "preserve"
+}
