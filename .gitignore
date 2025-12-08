@@ -1,12 +1,35 @@
-# IDE
-.vscode/
+# зависимости
+/node_modules
+/.pnp
+.pnp.js
 
-# Система
+# тестирование
+/coverage
+
+# продакшн
+/build
+/dist
+
+# misc
 .DS_Store
+*.pem
 
-# SCSS (если не коммитишь скомпилированные стили)
-# /css/
+# окружение
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Логи, временные файлы
-*.log
-*.tmp
+# лог
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# редакторы
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
