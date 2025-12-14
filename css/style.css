@@ -44,9 +44,62 @@ body {
 	background-color: var(--bg-color);
 }
 
-.grid-container {
+body * > * {
+	padding: 0.3rem;
+}
+
+.grid {
 	display: grid;
-	grid-template-columns: 200px 200px 200px;
-	grid-template-rows: repeat(3, 200px);
-	gap: 1em;
+	grid-template-columns: repeat(3, 150px);
+	grid-auto-rows: 100px;
+	grid-gap: 10px;
+	border: 2px solid cyan;
+	border-radius: 4px;
+	background-color: rgb(65, 190, 239);
+	width: 100%;
+	height: 500px;
+	justify-content: space-between;
+	align-content: space-between;
+}
+
+.grid div {
+	border: 2px solid cyan;
+	border-radius: 0.4rem;
+	padding: 0.3rem;
+	margin: 0.2rem 0.2rem;
+	box-shadow: 0.1rem 0.1rem 0.6em black;
+}
+
+.one {
+	grid-column: 1 / 3;
+	grid-row: 1 / 3;
+	background-color: #ebf963;
+}
+
+.two {
+	grid-column: 3;
+	grid-row: 1 / 2;
+	background-color: #ebf963;
+}
+
+.three {
+	grid-column: 3;
+	grid-row: 2 / 3;
+	background-color: #ebf963;
+}
+
+.four {
+	grid-column: 1;
+	grid-row: 2 / 4;
+	background-color: hsla(171, 72%, 31%, 0.449);
+}
+.five {
+	grid-column: 2 / 3;
+	grid-row: 3 / 4;
+	background-color: hsl(26, 71%, 53%);
+}
+.six {
+	grid-column: 3;
+	grid-row: 3 / 4;
+	background-color: hsla(222, 64%, 49%, 0.988);
 }
