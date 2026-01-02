@@ -21,7 +21,7 @@ body {
 
 .grid div {
 	border-radius: 0.5em;
-	corner-scheme: scoop;
+	/* corner-scheme: scoop; */
 }
 
 .grid__box1 {
@@ -75,14 +75,13 @@ body {
 	font-size: 1.6rem;
 }
 
-@media (min-width: 5) {
+@media (min-widht: 40%) {
 	.grid {
-		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr) 100%);
-		grid-auto-flow: column;
-		display: grid;
-		grid-gap: 2renm;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
 	}
 	.grid__box1 {
-		grid-column-start: span 2;
+		flex: 1;
 	}
 }
