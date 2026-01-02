@@ -1,6 +1,88 @@
-body {
-	font-family: Arial;
-	color: black;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
 
-	background: white;
+body {
+	font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+.grid {
+	display: grid;
+	border: 1px solid black;
+	border-radius: 0.3em;
+	gap: 0.5rem;
+	grid-template-columns: repeat(4, auto-fit, minmax(350px, 1fr));
+	grid-auto-rows: minmax(150px, min(100%) 1fr);
+	background-color: rgb(233, 165, 82);
+	padding: 0.5rem;
+}
+
+.grid div {
+	border-radius: 0.5em;
+	corner-scheme: scoop;
+}
+
+.grid__box1 {
+	grid-column: 1 / 2;
+	border: 1px solid brown;
+	background-color: #ef96db;
+	align-content: center;
+	text-align: center;
+	font-size: 1.6rem;
+}
+
+.grid__box2 {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	border: 1px solid black;
+	background-color: #171efd;
+	color: aliceblue;
+	font-size: 1.2rem;
+	align-content: center;
+	text-align: center;
+	font-size: 1.6rem;
+}
+
+.grid__box3 {
+	grid-column-start: 4;
+	grid-row-start: span 2;
+	border-image: 5;
+	border: 1px solid green;
+	background-color: lime;
+	align-content: center;
+	text-align: center;
+	font-size: 1.6rem;
+}
+
+.grid__box4 {
+	border: 1px solid black;
+	background-color: brown;
+	color: white;
+	align-content: center;
+	text-align: center;
+	font-size: 1.6rem;
+}
+
+.grid__box5 {
+	border: 3px solid black;
+	background-color: black;
+	grid-column-start: span 2;
+	color: white;
+	align-content: center;
+	text-align: center;
+	font-size: 1.6rem;
+}
+
+@media (min-width: 5) {
+	.grid {
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr) 100%);
+		grid-auto-flow: column;
+		display: grid;
+		grid-gap: 2renm;
+	}
+	.grid__box1 {
+		grid-column-start: span 2;
+	}
 }

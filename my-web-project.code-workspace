@@ -21,7 +21,7 @@
 			"editor.defaultFormatter": "esbenp.prettier-vscode",
 		},
 		"prettier.requireConfig": true,
-		"prettier.useEditorConfig": false,
+		"prettier.useEditorConfig": true,
 		"files.associations": {
 			"*.css": "css",
 		},
@@ -76,9 +76,10 @@
 		"editor.RainbowBrackets.enabled": true,
 		"editor.guides.bracketPairs": "active",
 		"css.format.enable": false,
-		"css.format.newlineBetweenRules": false,
-		"css.format.newlineBetweenSelectors": false,
-		"css.format.preserveNewLines": false,
+		"css.format.newlineBetweenRules": true,
+		"css.format.newlineBetweenSelectors": true,
+		"css.format.preserveNewLines": true,
+		"editor.formatOnSaveMode": "file",
 	},
 	"extensions": {
 		"recommendations": [

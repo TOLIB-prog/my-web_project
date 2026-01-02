@@ -1,6 +1,6 @@
 {
 	"extends": "stylelint-config-standard",
 	"rules": {
-		"declaration-empty-line-after": "always"
+		"declaration-empty-line-after": "never"
 	}
 }
