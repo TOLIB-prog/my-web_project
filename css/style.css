@@ -169,15 +169,15 @@
   left: 0;
   bottom: -0.2em;
   width: 100%;
-  height: 0.09 em;
-  background-color: gold;
+  height: 0.05em;
+  background-color: rgb(255, 0, 0);
 
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
 
-/*! применяем анимирование с подчеркивания ссылокб кроме модификаторов  */
+/*! применяем анимирование с подчеркивания ссылок кроме модификаторов  */
 
 .nav__link:is(:hover, :focus-visible):not(.nav__link--disabled):not(.nav__link--danger)::after {
   transform: scaleX(1);
@@ -236,8 +236,8 @@
   transform: scale(1.15);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
-/* Исключаем ссылку --disabled */
 
+/* Исключаем ссылку --disabled */
 .nav__link--disabled[data-badge]::before {
   display: none;
 }
@@ -259,4 +259,162 @@
   background-color: #efff0d;
   color: #000;
   transform: translateY(-1px);
+}
+
+/* ссылки блокак section */
+.demo-1 {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+/* оформаление ссылок */
+.demo-1__link {
+  position: relative;
+  padding: 0.5em 0.8em;
+  text-decoration: none;
+  color: #333;
+  border-radius: 6px;
+  transition: background-color 0.25s ease;
+}
+
+/* оформления ссылок при наведения, кроме ссылки с модификатором - disabled */
+.demo-1__link:not(.demo-1__link--disabled):hover {
+  color: rgb(218, 31, 177);
+  background-color: #9f9c9caa;
+  box-shadow: 2px 2px 6px black;
+}
+
+/* подчеркивания только у активной ссылки  */
+.demo-1__link--active {
+  color: #000000;
+  position: relative;
+}
+
+.demo-1__link--active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  color: rgb(255, 239, 239);
+  background-color: #f33f36;
+}
+
+/* отключение ссылки demo__linl--disabled */
+
+.demo-1__link--disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  color: gray;
+  cursor: not-allowed;
+}
+
+.demo-2 {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Оформление кнопок */
+.demo-2__btn {
+  padding: 0.4rem 0.8rem;
+  background-color: rgb(194, 191, 191);
+  border-radius: 6px;
+  box-shadow: -2px -2px 8px black;
+  /* transition используем для того чтобы когда было наведения на кнопку, - hover срабатывал  */
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* назначаем фон кнопки -primary */
+.demo-2__btn--primary {
+  background-color: rgb(76, 76, 194);
+}
+
+/* назначаем фон кнопки -danger */
+.demo-2__btn--danger {
+  background-color: #f53946;
+}
+
+/* hover - при наведение курсором на кнопку -danger и  -primary*/
+.demo-2__btn:is(:hover, :focus-visible):not(.demo-2__btn--disabled) {
+  color: #ffffff;
+}
+
+/* отключение кнопки -disabled */
+.demo-2__btn--disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.features {
+  padding: 3rem 2rem;
+}
+
+.features__title {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.features__list {
+  list-style-type: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.features__link {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  position: relative;
+  padding: 0.4rem 0.4rem;
+  border-radius: 4px;
+  transition:
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+/* hover при наведение на ссылку, кроме ссылки модификатора -disabled */
+.features__link:is(:hover, :focus-visible):not(.features__link--disabled) {
+  background-color: #cb8420;
+  color: #ffffff;
+  box-shadow: 2px 2px 8px black;
+  /* box-shadow: -4px -0.4px 10px #000000; */
+}
+
+/* выбрать ссылки для анимации, исключая ссылку с модифиатором --disabled, который есть в родительском элементе */
+.features__item:has(.features__link:hover):not(:has(.features__link--disabled)) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* отключения ссылки */
+.features__link--disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* стилизация бейджа на ссылки, через атрибут (data-badge) */
+.features__link[data-badge]::before {
+  content: attr(data-badge);
+  position: absolute;
+  top: -0.6em;
+  right: -0.8em;
+
+  font-size: 0.65rem;
+  padding: 0.02em 0.6em;
+  border-radius: 999px;
+  background-color: rgb(255, 212, 20);
+  color: #000;
+}
+
+/* анимирование бейдж при наведение */
+.feautures__link:is(:hover, :focus-visible)::before {
+  transform: scale(1.1);
 }
