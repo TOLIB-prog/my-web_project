@@ -1,31 +1,107 @@
 {
-	"editor.formatOnSave": true,
-	"editor.fontSize": 18,
-	"editor.mouseWheelZoom": true,
-	"css.format.braceStyle": "collapse",
-	"css.format.newlineBetweenRules": true,
-	"css.format.newlineBetweenSelectors": true,
-	"css.format.preserveNewLines": true,
-	"css.format.spaceAroundSelectorSeparator": false,
-	"css.format.maxPreserveNewLines": 80,
-	"css.hover.documentation": false,
-	"css.hover.references": true,
-	"css.completion.triggerPropertyValueCompletion": false,
-	"css.completion.completePropertyWithSemicolon": false,
-	"editor.defaultFormatter": null,
-	"editor.tabSize": 3,
-	"scss.format.maxPreserveNewLines": 80,
-	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
-	"[css]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[json]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"editor.wrapOnEscapedLineFeeds": true,
-	"notebook.output.wordWrap": true,
-	"html.format.wrapAttributes": "preserve",
-	"editor.formatOnType": true,
-	"editor.smoothScrolling": true,
-	"editor.scrollbar.vertical": "hidden"
+  "css.hover.documentation": false,
+  "css.hover.references": true,
+  "editor.formatOnSave": true,
+  "editor.fontSize": 14,
+  "editor.mouseWheelZoom": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "css.completion.triggerPropertyValueCompletion": true,
+  "css.completion.completePropertyWithSemicolon": true,
+
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+  "editor.wrapOnEscapedLineFeeds": true,
+  "notebook.output.wordWrap": true,
+
+  "editor.smoothScrolling": true,
+
+  "workbench.editor.labelFormat": "long",
+  "notebook.formatOnSave.enabled": true,
+  "html.format.wrapAttributesIndentSize": 2,
+  "html-css-class-completion.enableEmmetSupport": true,
+  "css.styleSheets": ["scss", "sass", "less"],
+  "css.format.preserveNewLines": true,
+  "css.format.newlineBetweenRules": true,
+  "css.format.newlineBetweenSelectors": true,
+  "css.format.braceStyle": "collapse",
+  "css.validate": true,
+  "scss.format.newlineBetweenRules": true,
+  "editor.dropIntoEditor.enabled": false,
+  "editor.experimental.preferTreeSitter.css": true,
+  "editor.scrollOnMiddleClick": false,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css",
+      "savePathReplacementPairs": null
+    }
+  ],
+  "css.format.maxPreserveNewLines": 2,
+  "scss.format.maxPreserveNewLines": 2,
+  "ruff.format.preview": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.overtypeCursorStyle": "line-thin",
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "explicit",
+  "editor.cursorSurroundingLines": 10,
+  "editor.cursorWidth": 2,
+  "editor.fontFamily": "\"Fira Code\", monospace",
+  "editor.codeLensFontFamily": "\"Fira Code\", monospace",
+  "html.format.indentInnerHtml": true,
+  "html.suggest.html5": true,
+  "html.suggest.hideEndTagSuggestions": true,
+  "prettier.singleAttributePerLine": true,
+  "html.hover.documentation": false,
+  "html.hover.references": true,
+  "html.format.indentHandlebars": true,
+  "html.format.templating": true,
+  "html.format.wrapAttributes": "auto",
+  "html.format.wrapLineLength": 80,
+  "prettier.htmlWhitespaceSensitivity": "css",
+  "editor.linkedEditing": true,
+  "prettier.requireConfig": true,
+  "scss.format.braceStyle": "collapse",
+  "editor.formatOnType": false,
+  "less.format.braceStyle": "expand",
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 120,
+  "editor.wrappingIndent": "same",
+  "prettier.proseWrap": "preserve",
+  "editor.autoIndent": "full",
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": false,
+  "editor.fastScrollSensitivity": 1,
+  "diffEditor.codeLens": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.codeActionWidget.includeNearbyQuickFixes": true,
+  "editor.suggest.snippetsPreventQuickSuggestions": true,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.multiCursorLimit": 10000,
+  "editor.multiCursorMergeOverlapping": true,
+  "editor.cursorStyle": "line-thin",
+  "less.format.newlineBetweenSelectors": false,
+  "less.format.preserveNewLines": false,
+  "less.format.newlineBetweenRules": false,
+  "prettier.requirePragma": true,
+  "prettier.insertPragma": true,
+  "RainbowBrackets.showBracketsInGutter": true,
+  "RainbowBrackets.forceIterationColorCycle": true
 }
