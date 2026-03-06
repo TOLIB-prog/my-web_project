@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Мой учебный проект</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- FontAwesome link below was pointing to an icon page, not a stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/typogrphy.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
@@ -13,57 +15,638 @@
       <div class="header__inner">
         <nav class="nav" aria-label="Main navigation">
           <div class="nav__block">
-            <a href="#" class="nav__logo">LOGO</a>
+            <a href="#" class="nav__logo nav__logo--link">LOGO</a>
           </div>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#" class="nav__link nav__link--active">Main</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link nav__link--disabled">About us</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link" data-badge="NEW">Contacts</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link nav__link--danger" data-badge="!">Fuq</a>
-            </li>
-          </ul>
+          <div class="nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link nav__link--active">Main</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link nav__link--disabled">About us</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link" data-badge="NEW">Contacts</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link nav__link--danger" data-badge="!">Fuq</a>
+              </li>
+            </ul>
+          </div>
+
           <div class="nav__actions">
-            <button class="nav__btn nav__btn--login">Enter</button>
-            <button class="nav__btn nav__btn--register">Register</button>
+            <button class="nav__btn nav__btn--login" id="loginBtn">Enter</button>
+            <button class="nav__btn nav__btn--register" id="registerBtn">Register</button>
           </div>
+
+          <button class="nav__burger" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </nav>
       </div>
     </header>
 
-    <section class="demo-1">
-      <a href="#" class="demo-1__link demo-1__link--active">Active link</a>
-      <a href="#" class="demo-1__link">Normal link</a>
-      <a href="#" class="demo-1__link demo-1__link--disabled">Disabled link</a>
+    <!-- МОДАЛЬНОЕ ОКНО ВХОДА (НОВОЕ) -->
+    <div class="modal" id="loginModal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <button class="modal__close" type="button" id="closeLoginModal">&times;</button>
+
+        <form action="#" class="login-form" method="post">
+          <h2 class="login-form__title">Вход в аккаунт</h2>
+
+          <div class="login-form__container">
+            <div class="login-form__block">
+              <label for="login-email">Email:</label>
+              <input type="email" id="login-email" class="login-form__input" required />
+            </div>
+
+            <div class="login-form__block">
+              <label for="login-password">Пароль:</label>
+              <input type="password" id="login-password" class="login-form__input" minlength="8" required />
+            </div>
+
+            <div class="login-form__row">
+              <div class="login-form__checkbox-block">
+                <input type="checkbox" id="remember" class="login-form__checkbox" />
+                <label for="remember">Запомнить меня</label>
+              </div>
+              <a href="https://support.google.com/accounts/answer/41078?h" class="login-form__link">Забыли пароль?</a>
+            </div>
+
+            <div class="login-form__social">
+              <p>Или войдите с помощью:</p>
+              <div class="login-form__social-icons">
+                <a href="https://myaccount.google.com/?" class="login-form__social-icon">G</a>
+                <a href="https://support.apple.com" class="login-form__apple-icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 18 18"
+                    class="login-form__apple-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.24 4.96c-.533 0-1.358-.629-2.228-.606-1.147.015-2.2.69-2.791 1.757-1.191 2.144-.307 5.31.855 7.053.57.849 1.242 1.803 2.133 1.773.855-.038 1.177-.576 2.214-.576 1.03 0 1.323.576 2.229.553.92-.015 1.505-.864 2.068-1.72.65-.984.92-1.939.935-1.992a3.076 3.076 0 01-1.812-2.833c-.015-1.773 1.396-2.621 1.461-2.659-.803-1.22-2.038-1.356-2.47-1.386-1.125-.091-2.067.636-2.593.636zm1.9-1.788c.475-.59.79-1.416.702-2.235-.68.03-1.498.47-1.988 1.061-.438.523-.818 1.364-.716 2.167.753.06 1.528-.402 2.002-.993z"
+                      fill="currentColor"
+                    ></path></svg
+                ></a>
+                <a href="https://github.com/login" class="login-form__git-icon"
+                  ><svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 16 16"
+                    class="login-form__git-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8.047.973c-3.868 0-7 3.212-7 7.177 0 3.176 2.004 5.858 4.786 6.81.35.062.481-.153.481-.342 0-.17-.008-.735-.008-1.337-1.76.332-2.214-.44-2.354-.843-.079-.206-.42-.843-.718-1.014-.245-.134-.595-.466-.008-.475.55-.009.945.52 1.076.736.63 1.085 1.636.78 2.039.592.06-.467.245-.78.446-.96-1.558-.18-3.185-.799-3.185-3.544 0-.78.271-1.426.717-1.929-.07-.18-.315-.915.07-1.902 0 0 .587-.188 1.925.736a6.443 6.443 0 013.5 0c1.34-.933 1.925-.736 1.925-.736.385.987.14 1.723.07 1.902.447.503.718 1.14.718 1.93 0 2.753-1.636 3.363-3.194 3.543.254.224.473.655.473 1.328 0 .96-.01 1.731-.01 1.973 0 .189.132.413.482.341 2.818-.975 4.768-3.76 4.769-6.81 0-3.964-3.133-7.176-7-7.176z"
+                      fill="currentColor"
+                    ></path></svg
+                ></a>
+              </div>
+            </div>
+
+            <div class="login-form__btns">
+              <button type="submit" class="login-form__btn">Войти</button>
+            </div>
+
+            <p class="login-form__switch">
+              Нет аккаунта?
+              <button type="button" id="switchToRegister" class="login-form__switch-btn">Зарегистрироваться</button>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Модальное окно регистрации -->
+    <div class="modal" id="registerModal">
+      <div class="modal__overlay"></div>
+
+      <div class="modal__content">
+        <button class="modal__close" type="button" id="closeRegisterModal">&times;</button>
+
+        <form action="#" class="registration" method="post">
+          <h2 class="registration__title">Form for registration</h2>
+
+          <div class="registration__container">
+            <div class="registration__block">
+              <label for="name">First Name:</label>
+              <input
+                tabindex="1"
+                id="name"
+                type="text"
+                class="registration__input"
+                autocomplete="given-name"
+                autocorrect="on"
+                required
+              />
+            </div>
+
+            <div class="registration__block">
+              <label for="lastName">Last Name:</label>
+              <input
+                tabindex="2"
+                id="lastName"
+                type="text"
+                class="registration__input"
+                autocomplete="family-name"
+                autocorrect="on"
+                required
+              />
+            </div>
+
+            <div class="registration__block">
+              <label for="mail">Email:</label>
+              <input tabindex="3" id="mail" type="email" class="registration__input" autocomplete="email" required />
+            </div>
+
+            <div class="registration__block">
+              <label for="tel">Phone:</label>
+              <input
+                tabindex="4"
+                id="tel"
+                type="tel"
+                class="registration__input"
+                minlength="12"
+                pattern="^\+?[0-9\s\-]{10,15}$"
+                required
+              />
+            </div>
+
+            <div class="registration__block">
+              <label for="psw">Password:</label>
+              <input
+                tabindex="4"
+                id="psw"
+                type="password"
+                class="registration__input"
+                minlength="12"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),{}[\]:;< >?/|~`])[\w!@#$%^&*(),{}[\]:;< >?/|~`]{12,}$"
+                required
+              />
+            </div>
+
+            <div class="registration__block">
+              <label for="file">File:</label>
+              <input type="file" name="file" id="file" class="registration__file" required />
+            </div>
+
+            <div class="registration__confirm">
+              <input type="checkbox" name="checkbox" id="agree" class="registration__checkbox" required />
+              <label for="agree" class="registration__label">I agree with the terms and conditions</label>
+              <a href="http://" class="registration__link">If confirm with our offer, please check</a>
+            </div>
+
+            <div class="registration__btns">
+              <button type="submit" class="registration__btn" tabindex="6">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- !========End Practice============ -->
+    <!-- !Typography -->
+    <section class="text">
+      <h1 class="text__title">Frontend Typography</h1>
+      <p class="text__lead">Typography is the art of arranging text to make content readable and building.</p>
+      <p class="text__body">Good typography improves user experiance and helps users understand content.</p>
+    </section>
+    <!--  Типографика в вебе -->
+    <section class="article">
+      <h2 class="article__title">Типографика в вебе</h2>
+      <p class="article__lead">Хорошо оформленный текст - это половина успеха интерфейса.</p>
+      <p class="article__text article__text--lead">
+        Веб-типографика - это не только выбор <strong><q> шрифтов </q></strong> но и работа с
+        <strong><q> расстояниеми, ритмом и визуальной иреархией.</q></strong>
+      </p>
+      <p class="article__text">
+        Пользователь не читает <strong>страницу</strong> целиком - он <strong>сканирует </strong> её.
+        <span class="article__icon">🔥</span> Веб-типографика важна
+      </p>
     </section>
 
-    <section class="demo-2">
-      <button class="demo-2__btn demo-2__btn--primary">Primary</button>
-      <button class="demo-2__btn demo-2__btn--danger">Danger</button>
-      <button class="demo-2__btn demo-2__btn--disabled">Disabled</button>
+    <!-- Подгатовка карточек -->
+
+    <section class="cards">
+      <article class="card">
+        <figure class="card__figure">
+          <img src="/image/img/i (3).jpg" alt="card" class="card__img" />
+          <figcaption class="card__caption">Описания изображения</figcaption>
+        </figure>
+        <h3 class="card__title">Заголовок</h3>
+        <p class="card__text">Короткий текст карточки</p>
+      </article>
+    </section>
+
+    <!-- секция контент -->
+    <section class="content">
+      <article class="content__article">
+        <h2 class="content__title">Заголовок статьи</h2>
+        <p class="content__lead">Этот вводный текст, который задаёт тон всей статьи.</p>
+        <figure class="content__figure">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnYC3kQmnFC1rb90wkD6tMG3O4sfF92ykBhg&s"
+            alt="Пример изображения"
+            width="600"
+            height="350"
+          />
+          <figcaption>Подпись к изображению</figcaption>
+        </figure>
+        <p class="content__text">
+          Основной текст статьи. Пользователь <strong> не читает</strong>, он <em>сканирует</em> страницу глазами.
+        </p>
+      </article>
+    </section>
+
+    <section class="describe">
+      <h2 class="describe__title">This page have a describe.</h2>
+      <ul class="describe__list">
+        <li class="describe__item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis, tempora!</li>
+        <li class="describe__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, quam!</li>
+        <li class="describe__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, labore.</li>
+        <li class="describe__item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, facilis.</li>
+        <li class="describe__item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, laboriosam!</li>
+      </ul>
     </section>
 
     <section class="features">
       <h2 class="features__title">Our features</h2>
-      <ul class="features__list">
-        <li class="features__item features__item--highlite">
-          <a href="#" class="features__link">Fast performance</a>
-        </li>
-        <li class="features__item">
-          <a href="#" class="features__link features__link--new" data-badge="NEW">Modern UI</a>
-        </li>
-        <li class="features__item">
-          <a href="#" class="features__link features__link--disabled">Comming soon</a>
-        </li>
-      </ul>
+      <div class="features__list">
+        <article class="feature">
+          <h3 class="feature__title">Fast</h3>
+          <p class="feature__text">Quick and reliable performance</p>
+        </article>
+        <article class="feature">
+          <h3 class="feature__title">Secure</h3>
+          <p class="feature__text">Your data is protected.</p>
+        </article>
+        <article class="feature">
+          <h3 class="feature__title">Flexible</h3>
+          <p class="feature__text">Ease to customize and scale.</p>
+        </article>
+      </div>
     </section>
 
-    <script src="/app/js/main.js"></script>
+    <!--!accordion -->
+    <section class="accardion">
+      <details class="accardion__item">
+        <summary class="accardion__title">MY List</summary>
+
+        <div class="accardion__content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque nam enim error maiores! Autem qui ex
+            illum maiores harum quo repellat! Deserunt ratione neque nesciunt possimus vitae rem quidem.
+          </p>
+        </div>
+      </details>
+      <details class="accardion__item">
+        <summary class="accardion__title">My Item</summary>
+        <div class="accardion__content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque nam enim error maiores! Autem qui ex
+            illum maiores harum quo repellat! Deserunt ratione neque nesciunt possimus vitae rem quidem.
+          </p>
+        </div>
+      </details>
+      <details class="accardion__item">
+        <summary class="accardion__title">MY Disison</summary>
+        <div class="accardion__content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque nam enim error maiores! Autem qui ex
+            illum maiores harum quo repellat! Deserunt ratione neque nesciunt possimus vitae rem quidem.
+          </p>
+        </div>
+      </details>
+      <details class="accardion__item">
+        <summary class="accardion__title">MY Content</summary>
+        <div class="accardion__content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui itaque nam enim error maiores! Autem qui ex
+            illum maiores harum quo repellat! Deserunt ratione neque nesciunt possimus vitae rem quidem.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Кнопки -->
+    <button class="fab fab--feedback" aria-label="Feedback" open>
+      <svg class="fab__icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M21 6h-18v12h4v4l4-4h10z" />
+      </svg>
+    </button>
+    <button class="fab fab--social" aria-label="Social" open>
+      <svg class="fab__icon" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2a1 1 0 011-.24c1.12.37 2.33.57 3.59.57a1 1 0 011 1v3.49a1 1 0 01-1 1c-9.39 0-17-7.61-17-17a1 1 0 011-1h3.5a1 1 0 011 1c0 1.26.2 2.47.57 3.59a1 1 0 01-.25 1z"
+        />
+      </svg>
+    </button>
+
+    <!-- Dialog 1: обратная связь -->
+    <dialog class="dialog dialog--feedback">
+      <div class="dialog__header">
+        <img src="/image/svg/istockphoto-1321256248-612x612.jpg" alt="" class="dialog__avatar" />
+        <h2 class="dialog__title">Оставтьте сообщение.</h2>
+      </div>
+      <textarea tabindex="1" name="" id="" class="dialog__textarea" placeholder="Ваше сообщение">
+Опишите проблему:</textarea
+      >
+      <input
+        tabindex="2"
+        type="tel"
+        class="dialog__input"
+        placeholder="Ваш телефон"
+        validate="+79991234567"
+        spellcheck="true"
+      />
+      <input
+        tabindex="3"
+        type="email"
+        class="dialog__input"
+        placeholder="Email"
+        validate="tommyjery@mail.com"
+        spellcheck="true"
+      />
+      <input tabindex="4" type="text" class="dialog__input" placeholder="Регион" spellcheck="true" />
+      <button tabindex="5" class="dialog__submit" aria-label="Close dialog" type="button">Отправить</button>
+    </dialog>
+
+    <!-- Dialog 2: Соцсети -->
+    <dialog class="dialog dialog--social">
+      <div class="dialog__header">
+        <img src="/image/svg/istockphoto-1321256248-612x612.jpg" alt="" class="dialog__avatar" />
+        <h2 class="dialog__title">Напишиите нам.</h2>
+      </div>
+      <textarea tabindex="1" name="" id="" class="dialog__textarea" placeholder="Сообщение"></textarea>
+      <a href="https://t.me/UserName?chat" target="_blank" class="dialog__link" tabindex="2">
+        <!-- telegram link -->
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M9.04 15.472l-.396 4.158c.568 0 .815-.244 1.11-.537l2.664-2.547 5.523 4.043c1.013.557 1.732.264 1.99-.938l3.607-16.89.001-.001c.305-1.424-.515-1.98-1.5-1.61L1.39 9.59c-1.37.533-1.35 1.297-.233 1.642l5.63 1.758 13.08-8.25c.615-.397 1.174-.177.713.22"
+          />
+        </svg>
+      </a>
+
+      <a href="https://wa.me/+79991234567" target="_blank" class="dialog__link dialog__link--color" tabindex="3">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M20.52 3.48A11.89 11.89 0 0012.06 0C5.4 0 0 5.4 0 12.06c0 2.12.56 4.19 1.62 6.01L0 24l6.11-1.6a12.02 12.02 0 005.95 1.53h.01c6.66 0 12.06-5.4 12.06-12.06 0-3.22-1.25-6.24-3.61-8.39zM12.07 21.8c-1.82 0-3.6-.49-5.15-1.42l-.37-.22-3.63.95.97-3.54-.24-.36a9.73 9.73 0 01-1.51-5.15c0-5.37 4.36-9.73 9.73-9.73 2.6 0 5.05 1.01 6.89 2.85a9.66 9.66 0 012.84 6.88c0 5.37-4.36 9.74-9.73 9.74zm5.33-7.29c-.29-.15-1.7-.84-1.97-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.19-.34.22-.63.07-.29-.15-1.23-.45-2.35-1.44-.87-.78-1.46-1.74-1.63-2.03-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.19.05-.36-.02-.51-.07-.15-.64-1.54-.87-2.11-.23-.55-.46-.47-.64-.48-.17-.01-.36-.01-.55-.01-.19 0-.51.07-.78.36-.26.29-1 1-1 2.43 0 1.43 1.03 2.8 1.18 3 .15.19 2.03 3.1 4.93 4.35.69.3 1.22.48 1.64.61.69.22 1.31.19 1.81.12.55-.08 1.7-.7 1.94-1.38.24-.68.24-1.27.17-1.38-.07-.1-.26-.15-.55-.29z"
+          />
+        </svg>
+      </a>
+      <button class="dialog__submit" aria-label="Close dialog" type="button" tabindex="4">Отправить</button>
+    </dialog>
+
+    <!-- Practice with grid -->
+    <div class="grid-container">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+    <!-- practice with grid areas -->
+    <div class="layout">
+      <header class="header">Header</header>
+      <nav class="nav">navigation</nav>
+      <main class="main">Main Content</main>
+      <aside class="sidebar">Saidebar</aside>
+      <footer class="footer">Footer</footer>
+    </div>
+
+    <!-- card-grid with adaptive layout -->
+    <div class="card-grid">
+      <div class="card">1 card</div>
+      <div class="card">2 card</div>
+      <div class="card">3 card</div>
+      <div class="card">4 card</div>
+      <div class="card">5 card</div>
+      <div class="card">6 card</div>
+      <div class="card">7 card</div>
+      <div class="card">8 card</div>
+    </div>
+
+    <!-- Вложеность Grid -->
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-image">
+          <img class="product-img" src="/image/img/cмартфон.jpg" alt="phone" widht="150" height="200" />
+        </div>
+        <h3 class="product-title">Смартфон ZTE-X 6-Pro</h3>
+        <p class="product-description">Отличный смартфон с камерой 108MP</p>
+        <div class="product-price">29.999 p</div>
+        <div class="product-raiting">★★★★☆</div>
+        <button class="product-btn">В корзину</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img class="product-img" src="/image/img/cмартфон.jpg" alt="phone" widht="150" height="200" />
+        </div>
+        <h3 class="product-title">Смартфон Pocco-X 6-Pro</h3>
+        <p class="product-description">Отличный смартфон с камерой 108MP</p>
+        <div class="product-price">29.999 p</div>
+        <div class="product-raiting">★★★★☆</div>
+        <button class="product-btn">В корзину</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img class="product-img" src="/image/img/cмартфон.jpg" alt="phone" widht="150" height="200" />
+        </div>
+        <h3 class="product-title">Смартфон Sony-X 6-Pro</h3>
+        <p class="product-description">Отличный смартфон с камерой 108MP</p>
+        <div class="product-price">29.999 p</div>
+        <div class="product-raiting">★★★★☆</div>
+        <button class="product-btn">В корзину</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img class="product-img" src="/image/img/cмартфон.jpg" alt="phone" widht="170" height="200" />
+        </div>
+        <h3 class="product-title">Смартфон Xiomie-X 6-Pro</h3>
+        <p class="product-description">Отличный смартфон с камерой 108MP</p>
+        <div class="product-price">29.999 p</div>
+        <div class="product-raiting">★★★★☆</div>
+        <button class="product-btn">В корзину</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img class="product-img" src="/image/img/cмартфон.jpg" alt="phone" widht="170" height="200" />
+        </div>
+        <h3 class="product-title">Смартфон Xiomie-X 6-Pro</h3>
+        <p class="product-description">Отличный смартфон с камерой 108MP</p>
+        <div class="product-price">29.999 p</div>
+        <div class="product-raiting">★★★★☆</div>
+        <button class="product-btn">В корзину</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img class="product-img" src="/image/img/cмартфон.jpg" alt="phone" widht="170" height="200" />
+        </div>
+        <h3 class="product-title">Смартфон Xiomie-X 6-Pro</h3>
+        <p class="product-description">Отличный смартфон с камерой 108MP</p>
+        <div class="product-price">29.999 p</div>
+        <div class="product-raiting">★★★★☆</div>
+        <button class="product-btn">В корзину</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img class="product-img" src="/image/img/cмартфон.jpg" alt="phone" widht="170" height="200" />
+        </div>
+        <h3 class="product-title">Смартфон Xiomie-X 6-Pro</h3>
+        <p class="product-description">Отличный смартфон с камерой 108MP</p>
+        <div class="product-price">29.999 p</div>
+        <div class="product-raiting">★★★★☆</div>
+        <button class="product-btn">В корзину</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img class="product-img" src="/image/img/cмартфон.jpg" alt="phone" widht="170" height="200" />
+        </div>
+        <h3 class="product-title">Смартфон Xiomie-X 6-Pro</h3>
+        <p class="product-description">Отличный смартфон с камерой 108MP</p>
+        <div class="product-price">29.999 p</div>
+        <div class="product-raiting">★★★★☆</div>
+        <button class="product-btn">В корзину</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img class="product-img" src="/image/img/cмартфон.jpg" alt="phone" widht="170" height="200" />
+        </div>
+        <h3 class="product-title">Смартфон Xiomie-X 6-Pro</h3>
+        <p class="product-description">Отличный смартфон с камерой 108MP</p>
+        <div class="product-price">29.999 p</div>
+        <div class="product-raiting">★★★★☆</div>
+        <button class="product-btn">В корзину</button>
+      </div>
+      <div class="product-card">
+        <div class="product-image">
+          <img class="product-img" src="/image/img/cмартфон.jpg" alt="phone" widht="170" height="200" />
+        </div>
+        <h3 class="product-title">Смартфон Xiomie-X 6-Pro</h3>
+        <p class="product-description">Отличный смартфон с камерой 108MP</p>
+        <div class="product-price">29.999 p</div>
+        <div class="product-raiting">★★★★☆</div>
+        <button class="product-btn">В корзину</button>
+      </div>
+    </div>
+    <!--  Masonry с Subgrid -->
+    <div class="masonry">
+      <div class="masonry-item" style="grid-row: span 2">
+        <img class="masonry-img" src="/image/img/i (7).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (1).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (10).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (14).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item" style="grid-row: span 2">
+        <img class="masonry-img" src="/image/img/i (12).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (13).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (14).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item" style="grid-row: span 2">
+        <img class="masonry-img" src="/image/img/i (15).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (2).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (2).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item" style="grid-row: span 2">
+        <img class="masonry-img" src="/image/img/i (15).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (2).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (2).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item" style="grid-row: span 2">
+        <img class="masonry-img" src="/image/img/i (15).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (2).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (2).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item" style="grid-row: span 2">
+        <img class="masonry-img" src="/image/img/i (15).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (2).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (2).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item" style="grid-row: span 2">
+        <img class="masonry-img" src="/image/img/i (15).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (2).jpg" alt="photo" />
+      </div>
+      <div class="masonry-item">
+        <img class="masonry-img" src="/image/img/i (2).jpg" alt="photo" />
+      </div>
+    </div>
+    <!-- Свойство выравнивания контейнера, основной сетки и элементов -->
+    <main class="page">
+      <div class="gallery">
+        <div class="gallery__card">1</div>
+        <div class="gallery__card">2</div>
+        <div class="gallery__card">3</div>
+      </div>
+    </main>
+    <!-- Галерея с разными размерами (кирпичная кладка)-->
+    <div class="gallery-advanced">
+      <div class="gallery-item large">Большой</div>
+      <div class="gallery-item wide">Широкий 1</div>
+      <div class="gallery-item tall">Высокий</div>
+      <div class="gallery-item small">
+        <p>Маленький</p>
+      </div>
+      <div class="gallery-item wide">Широкий 2</div>
+      <div class="gallery-item wide">Широкий 3</div>
+      <div class="gallery-item small">
+        <p>Маленький</p>
+      </div>
+      <div class="gallery-item tall">Высокий</div>
+      <div class="gallery-item tall">Высокий</div>
+      <div class="gallery-item large">Большой</div>
+    </div>
+
+    <!-- Второй уровень Grid Dashboard -->
+    <div class="dashboard">
+      <header class="dashboard-header">Хидер</header>
+      <nav class="dashboard-nav">Навигация</nav>
+      <main class="dashboard-main">
+        <div class="start">Статистика 1</div>
+        <div class="start">Статистика 2</div>
+        <div class="start">Статистика 3</div>
+        <div class="start">Статистика 4</div>
+        <div class="chart">График 1</div>
+        <div class="chart">График 2</div>
+        <div class="table">Таблица данных</div>
+      </main>
+      <aside class="dashboard-sidebar">Сайдбар</aside>
+      <footer class="dashboard-footer">Футер</footer>
+    </div>
+    <script src="./app/js/main.js"></script>
   </body>
 </html>
