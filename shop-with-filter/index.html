@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Maket</title>
+    <link rel="stylesheet" href="/shop-with-filter/css/style.css" />
+  </head>
+  <body>
+    <!-- ШАПКА -->
+    <header class="header">
+      <div class="header__logo"><a href="/shop-with-filter/index.html" class="header__logo-link">My Shop</a></div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href="#" class="header__link">Apple</a></li>
+          <li><a href="#" class="header__link">Samsung</a></li>
+          <li><a href="#" class="header__link">Xiaomi</a></li>
+          <li><a href="#" class="header__link">Huawei</a></li>
+        </ul>
+      </nav>
+      <div class="header__cart">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+          />
+        </svg>
+        <span class="header__badge header__badge--cart"></span>
+      </div>
+      <div class="header__favorite">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          stroke="currentColor"
+          class="size-5"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 2c-1.716 0-3.408.106-5.07.31C3.806 2.45 3 3.414 3 4.517V17.25a.75.75 0 0 0 1.075.676L10 15.082l5.925 2.844A.75.75 0 0 0 17 17.25V4.517c0-1.103-.806-2.068-1.93-2.207A41.403 41.403 0 0 0 10 2Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        <span class="header__badge header__badge--favorite"></span>
+      </div>
+      <button class="header__button">Войти</button>
+    </header>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ (САЙДБАР + КАТАЛОГ) -->
+    <div class="container">
+      <aside class="sidebar">
+        <h2 class="sidebar__title">Категории</h2>
+        <ul class="sidebar__list">
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link sidebar__link-active">Смартфоны</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link sidebar__link-active">Ноутбуки</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link sidebar__link-active">Планшеты</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link sidebar__link-active">Наушники</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link sidebar__link-active">Смарт-часы</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link sidebar__link-active">Телевизоры</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link sidebar__link-active">Фены</a>
+          </li>
+          <li class="sidebar__item">
+            <a href="#" class="sidebar__link sidebar__link-active">Утюги</a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <h2 class="content__title">Товары</h2>
+
+        <!-- sort product -->
+        <div class="sort">
+          <select class="sort__select">
+            <option>По популярности</option>
+            <option>Сначала дешевле</option>
+            <option>Сначала дороже</option>
+            <option>По рейтингу</option>
+          </select>
+          <div class="sort__view">
+            <button class="sort__view-btn active">📱</button>
+            <button class="sort__view-btn">📋</button>
+            <button class="sort__view-btn">📊</button>
+          </div>
+          <div class="sort__count">Найдено: 24 товара</div>
+        </div>
+
+        <!-- Блок контента карточек -->
+        <div class="content__grid">
+          <!-- Карточки товаров -->
+          <div class="product-card">
+            <img
+              src="/shop-with-filter/img/jpg/СApple Wotch 11_result.webp"
+              alt="Apple Watch 11"
+              class="product-card__image"
+            />
+            <h3 class="product-card__title">Apple Watch 11</h3>
+            <p class="product-card__price">35 000 ₽</p>
+            <button class="product-card__btn">В корзину</button>
+            <div class="product-card__rating">★★★★☆ (12)</div>
+          </div>
+          <div class="product-card">
+            <img
+              src="/shop-with-filter/img/jpg/Apple Watch Ultra3.webp"
+              alt="Apple Watch Ultra3"
+              class="product-card__image"
+            />
+            <h3 class="product-card__title">Apple Watch Ultra3</h3>
+            <p class="product-card__price">70 990 ₽</p>
+            <button class="product-card__btn">В корзину</button>
+            <div class="product-card__rating">★★★★☆ (12)</div>
+          </div>
+          <div class="product-card">
+            <img
+              src="/shop-with-filter/img/jpg/pexels-deise-elen-2149983761-31406903.jpg"
+              alt="Apple Watch 12"
+              class="product-card__image"
+            />
+            <h3 class="product-card__title">Apple Watch SE 12</h3>
+            <p class="product-card__price">30 990 ₽</p>
+            <button class="product-card__btn">В корзину</button>
+            <div class="product-card__rating">★★★★☆ (12)</div>
+          </div>
+          <div class="product-card">
+            <img src="/shop-with-filter/img/jpg/1058747_OLS2W00.jpg" alt="Iphone SR 10" class="product-card__image" />
+            <h3 class="product-card__title">Iphone SR 10</h3>
+            <p class="product-card__price">40 990 ₽</p>
+            <button class="product-card__btn">В корзину</button>
+            <div class="product-card__rating">★★★★☆ (12)</div>
+          </div>
+          <div class="product-card">
+            <img src="/shop-with-filter/img/jpg/2461960_140.jpg" alt="Monitor Apple" class="product-card__image" />
+            <h3 class="product-card__title">Monitor Apple</h3>
+            <p class="product-card__price">230 000 ₽</p>
+            <button class="product-card__btn">В корзину</button>
+            <div class="product-card__rating">★★★★☆ (12)</div>
+          </div>
+          <div class="product-card">
+            <img
+              src="/shop-with-filter/img/jpg/Iphone 17 pro max_result — копия.webp"
+              alt="Iphone 10"
+              class="product-card__image"
+            />
+            <h3 class="product-card__title">Iphone 17Pro Max</h3>
+            <p class="product-card__price">120 000 ₽</p>
+            <button class="product-card__btn">В корзину</button>
+            <div class="product-card__rating">★★★★☆ (12)</div>
+          </div>
+        </div>
+        <!-- pangination buttons -->
+        <div class="content__pagination">
+          <button class="pagination__btn">1</button>
+          <button class="pagination__btn">2</button>
+          <button class="pagination__btn">3</button>
+          <button class="pagination__btn">4</button>
+          <button class="pagination__btn">→</button>
+        </div>
+      </main>
+    </div>
+
+    <!-- ПОДВАЛ -->
+    <footer class="footer">
+      <nav class="footer__nav">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#" class="footer__link">Сотрудничество</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Партнерам</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Вакансии</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Контакты</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Помощь</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Отзывы</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="footer__social">
+        <ul class="footer__social-list">
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link">FB</a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link">TW</a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link">IG</a>
+          </li>
+          <li class="footer__social-item">
+            <a href="#" class="footer__social-link">YT</a>
+          </li>
+        </ul>
+      </div>
+
+      <address class="footer__address">
+        <a href="mailto:info@istore.com" class="footer__address-link">Email:info@istore.com</a>
+        <a href="tel:+1234567890" class="footer__address-phone">Phone:+1 (234) 567-890</a>
+      </address>
+    </footer>
+    <script src="/shop-with-filter/js/script.js"></script>
+  </body>
+</html>
